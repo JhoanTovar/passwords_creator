@@ -1,0 +1,2 @@
+#Aqui deberian ir todas las dependencias externas que se vayan a usar en el proyecto, en este caso usamos
+#dependencias propias de Python y no hay necesidad de instalarlas, solamente es importarlas y listo.
