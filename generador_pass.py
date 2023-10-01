@@ -11,22 +11,22 @@ def generar_contraseña(longitud, num_min, min_mayus, min_minus):
         raise ValueError('La longitud mínima especificada no es suficiente para cumplir con los requisitos.')
     
     
-    # Calcular la longitud restante para caracteres aleatorios
+    # Calcular la longitud restante para caracteres aleatorios.
     longitud_restante = longitud - (num_min + min_mayus + min_minus)
     
-    # Generar caracteres aleatorios
+    # Generar caracteres aleatorios.
     contraseña = ''.join(random.choice(caracteres) for _ in range(longitud_restante))
     
-    # Generar dígitos
+    # Generar dígitos.
     contraseña += ''.join(random.choice(string.digits) for _ in range(num_min))
     
-    # Generar letras mayúsculas
+    # Generar letras mayúsculas.
     contraseña += ''.join(random.choice(caracteres_mayus) for _ in range(min_mayus))
     
-    # Generar letras minúsculas
+    # Generar letras minúsculas.
     contraseña += ''.join(random.choice(caracteres_minus) for _ in range(min_minus))
     
-    # Mezclar la contraseña para mayor aleatoriedad
+    # Mezclar la contraseña.
     contraseña = ''.join(random.sample(contraseña, len(contraseña)))
 
     return contraseña
